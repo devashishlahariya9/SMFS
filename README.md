@@ -5,5 +5,5 @@ The SMFS is a File System Created to be used for File related operations. SMFS o
 * **FILE SIZE: 4GB PER FILE**
 * **MAX DISK SIZE: 2TB**
 * **SIMPLE TO USE**
-* **FLEXIBLE WITH DEVICES: **
+* **FLEXIBLE WITH DEVICES**
 * **VERY LOW DEPENDENCY**
