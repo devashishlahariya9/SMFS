@@ -7,22 +7,14 @@
 
 int main(void)
 {
-	system("cls");
-
-	printf("\n\n\n\nSMFS SIMULATION STARTED...\n");
-
 	SMFS_FILE file;
 
 	smfs_format_disk();
 
 	SMFS_STATUS fs_status = smfs_init();
 
-	printf("\nFILE SYSTEM INITIALIZED...\n");
-
 	if(fs_status == FS_OK)
 	{
-		printf("\nFILESYSTEM STATUS: FS_OK\n");
-
 		uint64_t space_used = smfs_getTotalStorageUsed();
 		float percentage_space_used = (((float)space_used / (float)DISK_MEMORY) * 100);
 		printf("STORAGE USED: %d BYTES || %.2f%%\n", space_used, percentage_space_used);
@@ -42,11 +34,6 @@ int main(void)
 		uint64_t space_used = smfs_getTotalStorageUsed();
 		float percentage_space_used = (((float)space_used / (float)DISK_MEMORY) * 100);
 		printf("STORAGE USED: %d BYTES || %.2f%%\n", space_used, percentage_space_used);
-	}
-	else
-	{
-		printf("\033[1;31m");
-		printf("FILESYSTEM STATUS: FS_NO_FILESYSTEM\n");
 	}
 	return 0;
 }
